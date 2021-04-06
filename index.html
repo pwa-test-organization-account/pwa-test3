@@ -9,6 +9,17 @@
 <!-- ウェブアプリマニフェストの読み込み -->
 <link rel="manifest" href="manifest.json">
 
+<!-- ServiceWorkerの登録 -->
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('firebase-messaging-sw.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+}
+</script>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js"></script>
