@@ -5,7 +5,9 @@ firebase.initializeApp({
     'messagingSenderId': '758160015443'
 });
 const messaging = firebase.messaging();
- 
+
+console.log('きたよ');
+
 // フォアグラウンドでのプッシュ通知受信
 messaging.onMessage(function(payload) {
     var notificationTitle = payload.data.title; // タイトル
