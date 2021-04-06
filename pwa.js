@@ -72,7 +72,7 @@ function subscribeUser() {
 
   })
   .catch(function(err) {
-    onPushConsole('Failed to subscribe the user: ', err);
+    onPushConsole('Failed to subscribe the user: ' + err);
   });
 }
 
@@ -112,7 +112,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
     })
     .catch(function(err) {
-      onPushConsole('Failed to subscribe the user: ', err);
+      onPushConsole('Failed to subscribe the user: ' + err);
     });
 
 
