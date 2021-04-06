@@ -65,7 +65,7 @@ function subscribeUser() {
     applicationServerKey: applicationServerKey
   })
   .then(function(subscription) {
-    onPushConsole('User is subscribed:', subscription);
+    onPushConsole('User is subscribed:' + subscription);
     onJsonConsole(JSON.stringify(subscription));
 
     isSubscribed = true;
@@ -81,7 +81,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
   navigator.serviceWorker.register('service_worker.js')
   .then(function(swReg) {
-    onPushConsole('Service Worker is registered', swReg);
+    onPushConsole('Service Worker is registered' + swReg);
 
     swRegistration = swReg;
     swRegistration.onupdatefound = function() {
@@ -92,18 +92,23 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
     navigator.serviceWorker.register('service_worker.js')
     .then(function(swReg) {
-      onPushConsole('Service Worker is registered', swReg);
+      onPushConsole('Service Worker is registered' + swReg);
 
       swRegistration = swReg;
       initialiseUI();
     })
+    
+    const permission = Notification.permission;
+    onPushConsole('push許可:' + permission);
+    if (permission == 'default') Notification.requestPermission();
+    
     const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
     swRegistration.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: applicationServerKey
     })
     .then(function(subscription) {
-      onPushConsole('User is subscribed:', JSON.stringify(subscription));
+      onPushConsole('User is subscribed:' + JSON.stringify(subscription));
       onJsonConsole(JSON.stringify(subscription));
 
 
