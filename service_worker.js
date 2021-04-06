@@ -1,5 +1,5 @@
 // キャッシュファイルの指定
-var CACHE_NAME = 'pwa-sample-caches3';
+var CACHE_NAME = 'pwa-sample-caches4';
 var urlsToCache = [
     '/pwa-test3/',
 ];
