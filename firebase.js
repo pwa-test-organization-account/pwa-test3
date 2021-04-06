@@ -1,10 +1,3 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('firebase-messaging-sw.js')
-      .then((reg) => {
-        console.log('Service worker registered.', reg);
-      });
-}
-
 // Firebase設定
 var firebaseConfig = {
     apiKey: "AIzaSyAtTnEIWyiZE-prcSdIg9zlf83As-XAd6A",
