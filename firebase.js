@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service_worker.js')
+    navigator.serviceWorker.register('firebase-messaging-sw.js')
       .then((reg) => {
         console.log('Service worker registered.', reg);
       });
