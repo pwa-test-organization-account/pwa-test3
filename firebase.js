@@ -1,3 +1,10 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+}
+
 // Firebase設定
 var firebaseConfig = {
     apiKey: "AIzaSyAtTnEIWyiZE-prcSdIg9zlf83As-XAd6A",
