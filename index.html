@@ -8,6 +8,12 @@
 <link rel="stylesheet" type="text/css" href="app.css">
 <!-- ウェブアプリマニフェストの読み込み -->
 <link rel="manifest" href="manifest.json">
+
+<script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+<script defer src="firebase.js"></script>
+
 </head>
 <body>
 
@@ -24,30 +30,11 @@
 
 </section>
 
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAtTnEIWyiZE-prcSdIg9zlf83As-XAd6A",
-    authDomain: "pwa-test-a2741.firebaseapp.com",
-    projectId: "pwa-test-a2741",
-    storageBucket: "pwa-test-a2741.appspot.com",
-    messagingSenderId: "758160015443",
-    appId: "1:758160015443:web:ddb85ce82488df229ac6a6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
   
-  
+<!--
 <script src="app.js"></script>
 <script src="pwa.js"></script>
-
+-->
+  
 </body>
 </html>
