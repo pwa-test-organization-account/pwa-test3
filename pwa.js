@@ -100,7 +100,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
     
     const permission = Notification.permission;
     onPushConsole('push許可:' + permission);
-    if (permission == 'default') Notification.requestPermission();
+    Notification.requestPermission();
     
     const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
     swRegistration.pushManager.subscribe({
